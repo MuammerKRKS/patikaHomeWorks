@@ -19,7 +19,7 @@ public class FindingTheTwoClosestNumbers {
         numbers.add(4000);
 
         List<Integer> list = new ArrayList<>(numbers); // TreeSet'i ArrayList içerisine aktarıyoruz
-        int minDiff =Integer.MAX_VALUE;
+        int minDiff =Integer.MAX_VALUE; // En büyük sayı değerini atıyoruz.
         int num1 = 0, num2 = 0;
 
         for (int i = 0; i < list.size() - 1; i++) {
