@@ -26,7 +26,7 @@ public class FindingTheTwoClosestNumbers {
             int diff = list.get(i + 1) - list.get(i); /*sırayla iki komşu sayı alıyoruz. list.get(i) mevcut sayı - list.get(i + 1) bir sonraki sayı.
                                                        Farklarını alıp en küçük sayıyı buluyoruz */
 
-            if (diff < minDiff){  // sayılar araasında bulunan farkları burada güncelleyip nihai sonuca ulaşıyoruz.
+            if (diff < minDiff){  // sayılar arasında bulunan farkları burada güncelleyip nihai sonuca ulaşıyoruz.
                 minDiff = diff;
                 num1 = list.get(i);
                 num2 = list.get(i + 1);
