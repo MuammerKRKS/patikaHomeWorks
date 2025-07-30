@@ -14,13 +14,13 @@ public class MovieLibrary {
         movies.add(new Movie("Baba 2", 1974, "Suç, Drama, Trajedi", 9.0));
         movies.add(new Movie("12 Öfkeli Adam", 1957, "Hukuk Draması, Psikolojik Drama, Suç, Drama", 9.0));
 
-        //IMDb puanına göre sıralama yapıyoruz.
+        // IMDb puanına göre sıralama yapıyoruz.
         System.out.println("IMDb puanına göre büyükten küçüğe: ");
         movies.sort((m1, m2) -> Double.compare(m2.getImdbRating(), m1.getImdbRating()));
         for (Movie movie : movies) {
             System.out.println(movie); //to string otomatik çalışacak
         }
-        // yıla göre sıralıyorz
+        // Yıla göre sıralıyoruz
         System.out.println("\nYayın yılına göre sıralanmış (eskiden yeniye):");
         movies.sort(Comparator.comparingInt(Movie::getYearOfPublication));
         for (Movie movie : movies) {
@@ -28,11 +28,11 @@ public class MovieLibrary {
         }
 
 
-        //Türe göre sıralıyoruz
+        // Türe göre sıralıyoruz
         System.out.println("\nTürlere göre Filtrelendi (Drama, Suç, Gerilim)");
         movieGenreFilter(movies, "Drama, Suç, Gerilim, Hukuk Draması, Psikolojik Drama ");
     }
-
+            // Bu metod verilen türe göre filtreleme yapar
         public static void movieGenreFilter (List < Movie > movies, String genreFilter){
             String[] genres = genreFilter.split(",");
             for (Movie movie : movies) {
