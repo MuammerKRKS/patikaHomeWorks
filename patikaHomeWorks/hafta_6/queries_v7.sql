@@ -10,7 +10,7 @@ FROM film
 GROUP BY replacement_cost
 HAVING COUNT(*) > 50;
 
--- 3. customer tablosunda bulunan store_id değerlerine karşılık gelen müşteri sayılarını nelerdir?
+-- 3. customer tablosunda bulunan store_id değerlerine karşılık gelen müşteri sayıları nelerdir?
 SELECT store_id, COUNT(*) AS customer_count
 FROM customer
 GROUP BY store_id;
